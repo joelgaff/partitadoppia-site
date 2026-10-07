@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!-- Source for social-card.png. Re-render with:
+     chromium --headless=new --hide-scrollbars --force-device-scale-factor=1 --window-size=1200,630 --screenshot=social-card.png social-card.html -->
+<html lang="en"><head><meta charset="utf-8">
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; width: 1200px; height: 630px; overflow: hidden; }
+  body {
+    background: #060a12;
+    color: #c3d4ea;
+    font-family: "JetBrains Mono", "JetBrainsMono Nerd Font", ui-monospace, monospace;
+    position: relative;
+    -webkit-font-smoothing: antialiased;
+  }
+  body::before {
+    content: ""; position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(41,74,120,0.18) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(41,74,120,0.18) 1px, transparent 1px);
+    background-size: 54px 54px;
+    -webkit-mask-image: radial-gradient(ellipse 110% 90% at 30% 0%, #000 0%, transparent 75%);
+  }
+  .edge { position: absolute; top: 0; left: 0; right: 0; height: 6px;
+    background: linear-gradient(90deg, #e879f9, #a78bfa 45%, #22d3ee); }
+  .left { position: absolute; left: 72px; top: 0; bottom: 0; width: 560px;
+    display: flex; flex-direction: column; justify-content: center; }
+  .brand { display: flex; align-items: center; gap: 18px; margin-bottom: 26px; }
+  .brand svg { color: #22d3ee; display: block; }
+  .wordmark { font-size: 54px; line-height: 1; font-weight: 700; letter-spacing: 0.08em;
+    text-transform: uppercase; color: #e8f1fb; white-space: nowrap; }
+  .tagline { font-size: 26px; color: #22d3ee; letter-spacing: 0.02em; margin: 0 0 22px; }
+  .pitch { font-size: 19px; line-height: 1.55; color: #c3d4ea; margin: 0 0 30px; max-width: 540px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 10px; }
+  .chips span { padding: 7px 14px; border: 1px solid #294a78; border-radius: 3px;
+    background: rgba(41,74,120,0.16); color: #e8f1fb; font-size: 16px; letter-spacing: 0.04em; }
+  .url { position: absolute; left: 72px; bottom: 40px; font-size: 16px; letter-spacing: 0.16em;
+    text-transform: uppercase; color: #5f7b9d; }
+  .url b { color: #34d399; font-weight: 400; margin-right: 10px; }
+  .shot { position: absolute; left: 690px; top: 92px; width: 620px; height: 655px;
+    border: 1px solid #294a78; border-radius: 6px; overflow: hidden;
+    background: #0a1020; box-shadow: 0 30px 80px rgba(0,0,0,0.7); }
+  .shot img { display: block; width: 100%; height: auto; }
+</style></head>
+<body>
+  <div class="edge"></div>
+  <div class="left">
+    <div class="brand">
+      <svg viewBox="0 0 512 512" width="52" height="52" aria-hidden="true">
+        <g fill="none" stroke="currentColor" stroke-width="44" stroke-linecap="square">
+          <path d="M176 126 H126 V386 H176"/><path d="M336 126 H386 V386 H336"/>
+        </g><circle cx="256" cy="256" r="44" fill="currentColor"/>
+      </svg>
+      <div class="wordmark">Partita Doppia</div>
+    </div>
+    <p class="tagline">Simple small business bookkeeping</p>
+    <p class="pitch">Double-entry books for small businesses. Invoices, bills, bank reconciliation, Xero-style tracking and the standard reports.</p>
+    <div class="chips"><span>Rails 8</span><span>SQLite</span><span>Hotwire</span><span>Open source, MIT</span></div>
+  </div>
+  <div class="url"><b>&#9679;</b>partitadoppia.app</div>
+  <div class="shot"><img src="../screenshots/dashboard.jpg" alt=""></div>
+</body></html>
