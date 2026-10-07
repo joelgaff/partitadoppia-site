@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Partita Doppia. Every line balanced.</title>
+  <title>Partita Doppia. Simple small business bookkeeping.</title>
   <meta name="description" content="Double-entry books for one small business. Invoices, bills, bank reconciliation, Xero-style tracking categories and the standard reports, in a Rails 8 app that runs on SQLite and needs nothing else.">
   <link rel="canonical" href="https://partitadoppia.app/">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://partitadoppia.app/">
-  <meta property="og:title" content="Partita Doppia. Every line balanced.">
+  <meta property="og:title" content="Partita Doppia. Simple small business bookkeeping.">
   <meta property="og:description" content="Double-entry books for one small business. Invoices, bills, bank reconciliation, Xero-style tracking categories and the standard reports, in a Rails 8 app that runs on SQLite and needs nothing else.">
   <meta property="og:image" content="https://partitadoppia.app/screenshots/dashboard.jpg">
   <meta property="og:image:alt" content="Dashboard: operating bank, receivables, payables and the latest ledger entries">
@@ -308,6 +308,9 @@
       .titlebar { padding: 0 12px; }
       .titlebar nav { gap: 12px; }
       .titlebar nav a:nth-child(n+3) { display: none; }
+      .statusbar { flex-direction: column; align-items: flex-start; padding: 10px 16px; }
+      .statusbar div:last-child > span { display: block; }
+      .statusbar span + span::before { content: none; }
     }
   </style>
 </head>
@@ -335,11 +338,11 @@
     <main>
       <section class="hero">
         <h1 class="wordmark">Partita Doppia</h1>
-        <p class="tagline">Every line balanced.</p>
-        <p>Double-entry books for one small business. Invoices, bills, spend and receive money, transfers, manual journals, bank reconciliation, Xero-style tracking categories and the standard reports, in a Rails 8 app that runs on SQLite and needs nothing else.</p>
-        <p>Built by someone leaving Xero who wanted to keep the parts that worked and own the rest.</p>
+        <p class="tagline">Simple small business bookkeeping</p>
+        <p>Double-entry books for small businesses. Invoices, bills, spend and receive money, transfers, manual journals, bank reconciliation, Xero-style tracking categories and the standard reports, in a Rails 8 app that runs on SQLite and needs nothing else.</p>
+        <p>Built to migrate easily from Xero.</p>
         <div class="etymology">
-          <em>Partita doppia</em> is Italian for double-entry bookkeeping, the method Luca Pacioli codified in 1494. <span class="say">Say par-TEE-tah DOHP-pyah.</span>
+          <em>Partita doppia</em> is Italian for double-entry bookkeeping. <span class="say">Say par-TEE-tah DOHP-pyah.</span>
         </div>
         <div class="actions">
           <a class="btn btn-primary" href="https://github.com/joelgaff/partita_doppia">View on GitHub</a>
@@ -355,7 +358,7 @@
           <li><strong>Tracking categories</strong>Up to two active categories the way Xero does them, one option per category on any line, and a profit and loss broken out by option.</li>
           <li><strong>Reports</strong>Profit and loss, balance sheet, trial balance, general ledger, receivables and payables aging, profit and loss by tracking category.</li>
           <li><strong>Invoicing</strong>Numbered invoices with a PDF, emailed to the customer with the PDF attached, recurring invoices, and a per-document activity log.</li>
-          <li><strong>Xero import over the API</strong>Pull the chart of accounts, tax rates, contacts, tracking categories, every invoice and bill with payments, spend and receive money, transfers and manual journals. Re-running updates in place. Xero's CSV exports upload as a fallback.</li>
+          <li><strong>Xero import via API</strong>Pull the chart of accounts, tax rates, contacts, tracking categories, every invoice and bill with payments, spend and receive money, transfers and manual journals. Re-running updates in place. Xero's CSV exports upload as a fallback.</li>
           <li><strong>Passwordless sign-in</strong>Every sign-in emails a six-digit code. An installation can instead trust an SSO hub's cookie.</li>
           <li><strong>Dark and light themes</strong>Chosen per person, in a terminal-flavoured UI.</li>
         </ul>
@@ -412,6 +415,7 @@
       <div>
         <span><a href="https://github.com/joelgaff/partita_doppia">github.com/joelgaff/partita_doppia</a></span>
         <span><a href="https://github.com/joelgaff/partita_doppia/blob/master/LICENSE">MIT license</a></span>
+        <span>Made by <a href="https://joelgaff.com">Joel Gaff, Jr.</a></span>
       </div>
     </footer>
   </div>
