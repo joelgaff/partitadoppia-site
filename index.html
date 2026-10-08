@@ -256,6 +256,14 @@
       margin-right: 10px;
     }
 
+    .phones {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      gap: 22px 18px;
+    }
+    .phones img { border-radius: 10px; }
+    .phones figcaption strong { display: block; margin-bottom: 2px; }
+
     .stack { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 16px; padding: 0; list-style: none; }
     .stack li {
       padding: 4px 10px;
@@ -375,16 +383,39 @@
         <h2 class="label">Screens</h2>
         <div class="shots">
           <figure>
-            <img src="screenshots/dashboard.jpg" width="1041" height="1100" alt="Dashboard: operating bank, receivables, payables and the latest ledger entries" loading="eager">
+            <img src="screenshots/dashboard.jpg" width="1200" height="1100" alt="Dashboard: operating bank, receivables, payables and the latest ledger entries" loading="eager">
             <figcaption><strong>Dashboard</strong>Operating bank, receivables, payables and the latest ledger entries.</figcaption>
           </figure>
           <figure>
-            <img src="screenshots/reconcile.jpg" width="1041" height="1100" alt="Bank reconciliation: suggestions with a one-click OK, split, categorise or transfer" loading="lazy">
+            <img src="screenshots/reconcile.jpg" width="1200" height="1100" alt="Bank reconciliation: suggestions with a one-click OK, split, categorise or transfer" loading="lazy">
             <figcaption><strong>Reconcile</strong>Suggestions with a one-click OK, or split, categorise or pair with a transfer.</figcaption>
           </figure>
           <figure>
-            <img src="screenshots/profit-and-loss-by-tracking.jpg" width="1041" height="1100" alt="Profit and loss broken out by a tracking category" loading="lazy">
+            <img src="screenshots/profit-and-loss-by-tracking.jpg" width="1200" height="1100" alt="Profit and loss broken out by a tracking category" loading="lazy">
             <figcaption><strong>P&amp;L by tracking</strong>Profit and loss broken out by the options of a tracking category.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section id="phone">
+        <h2 class="label">On a phone</h2>
+        <p>Below 700 pixels the sidebar becomes a tab bar, tables become cards, and a document's actions move to the bottom where a thumb can reach them. Same pages, same markup, laid out for the device.</p>
+        <div class="phones">
+          <figure>
+            <img src="screenshots/phone-dashboard.jpg" width="390" height="844" alt="Dashboard on a phone: stacked balance tiles, quick actions and recent activity as cards" loading="lazy">
+            <figcaption><strong>Dashboard</strong>Balances stacked, quick actions under them.</figcaption>
+          </figure>
+          <figure>
+            <img src="screenshots/phone-invoices.jpg" width="390" height="844" alt="Invoice list on a phone: filter chips, one card per invoice with a status chip, and a floating new button" loading="lazy">
+            <figcaption><strong>Invoices</strong>Filter chips, a card per invoice, a floating plus.</figcaption>
+          </figure>
+          <figure>
+            <img src="screenshots/phone-invoice.jpg" width="390" height="844" alt="An invoice on a phone: header, lines as cards, totals, and a sticky action bar with Record payment and Edit" loading="lazy">
+            <figcaption><strong>Invoice</strong>Lines as cards, actions pinned at the bottom.</figcaption>
+          </figure>
+          <figure>
+            <img src="screenshots/phone-reconcile.jpg" width="390" height="844" alt="Bank reconciliation on a phone: account balances, filter chips and a statement line with its suggestion and OK button" loading="lazy">
+            <figcaption><strong>Reconcile</strong>Each line a card with a thumb-sized OK.</figcaption>
           </figure>
         </div>
       </section>
